@@ -3,6 +3,8 @@
 -- Sistema de detección de fraude / scoring de pagos en tiempo real
 -- =====================================================================
 
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
 -- ---------------------------------------------------------------------
 -- NIVEL 0: Tablas base (no dependen de otras)
 -- ---------------------------------------------------------------------
@@ -120,10 +122,10 @@ CREATE TABLE decision_scoring (
     intento_id UUID UNIQUE REFERENCES intento_pago(intento_id),
     modelo_version_id UUID REFERENCES modelo_scoring(modelo_version_id),
     fecha_hora TIMESTAMP,
-    score_riesgo DECIMAL(5, 4),
+    score_riesgo DECIMAL(5, 4) CHECK (score_riesgo BETWEEN 0 AND 1),
     decision VARCHAR(50),
     motivo_principal VARCHAR(100),
-    latencia_ms INT
+    latencia_ms INT CHECK (latencia_ms >= 0)
 );
 
 -- Relación 1:1 con intento_pago (UNIQUE en intento_id)
@@ -159,4 +161,3 @@ CREATE TABLE decision_regla (
     resultado VARCHAR(100),
     PRIMARY KEY (decision_id, regla_version_id)
 );
-

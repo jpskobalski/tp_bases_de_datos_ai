@@ -1,0 +1,8 @@
+DBSIZE
+HGETALL fraud:features:payer:00000000-0000-0000-0000-000000007002
+HGETALL fraud:features:device:00000000-0000-0000-0000-000000008005
+SCARD fraud:relations:device:00000000-0000-0000-0000-000000008005:payers
+SMEMBERS fraud:relations:payer:00000000-0000-0000-0000-000000007002:devices
+XLEN fraud:payment_scored
+XRANGE fraud:payment_scored - + COUNT 10
+XINFO GROUPS fraud:payment_scored

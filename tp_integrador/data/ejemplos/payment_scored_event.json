@@ -1,0 +1,34 @@
+{
+  "event_id": "10000000-0000-0000-0000-00000000e003",
+  "event_type": "PaymentScoredEvent",
+  "schema_version": 1,
+  "occurred_at": "2026-08-02T11:00:00Z",
+  "intento": {
+    "intento_id": "00000000-0000-0000-0000-00000000b003",
+    "fecha_hora": "2026-08-02T11:00:00Z",
+    "pagador_id": "00000000-0000-0000-0000-000000007002",
+    "cobrador_id": "00000000-0000-0000-0000-000000009002",
+    "tarjeta_id": "00000000-0000-0000-0000-00000000a002",
+    "dispositivo_id": "00000000-0000-0000-0000-000000008002",
+    "monto": "1850.00",
+    "moneda": "ARS",
+    "direccion_ip": "200.40.2.8",
+    "pais_origen": "AR"
+  },
+  "feature_snapshot": {
+    "payer.tx_count_5m": "8",
+    "payer.amount_sum_1h": "6200.00",
+    "device.distinct_payers_24h": "5"
+  },
+  "decision": {
+    "decision_id": "00000000-0000-0000-0000-00000000c003",
+    "score_riesgo": 0.96,
+    "decision": "RECHAZADO",
+    "modelo_version_id": "rf-demo-v1",
+    "reglas_disparadas": [
+      "RF001_HIGH_AMOUNT",
+      "RF002_PAYER_VELOCITY"
+    ],
+    "latencia_ms": 18
+  }
+}
