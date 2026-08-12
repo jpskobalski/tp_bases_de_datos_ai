@@ -6,10 +6,10 @@ Docente: Martín Lacheski
 
 ## Integrantes
 
-- Ronald Uthurralt
-- Luis Diaz
 - Juan Pablo Skobalski
-- Lurdes
+- Lourdes Gonzalez Bianchi
+- Luis Diaz
+- Ronald Uthurralt
 
 ## Caso de uso
 
