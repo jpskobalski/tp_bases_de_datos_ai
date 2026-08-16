@@ -7,8 +7,8 @@ Docente: Martín Lacheski
 ## Integrantes
 
 - Juan Pablo Skobalski
-- Lourdes Gonzalez Bianchi
-- Luis Diaz
+- Lourdes Gonzalez Branchi
+- Luis Diaz Charris
 - Ronald Uthurralt
 
 ## Caso de uso
